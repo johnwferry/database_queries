@@ -1,0 +1,13 @@
+\project_{name} (
+			(\rename_{name} \project_{drinker}
+				(\select_{beer='Corona'} likes
+				)
+			)
+
+		\diff
+			(\rename_{name} \project_{drinker}
+				(\select_{beer='Budweiser'} likes
+				)
+			)
+		)
+;

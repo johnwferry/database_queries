@@ -1,0 +1,152 @@
+(
+(
+
+\rename_{serves: bar, beer, price}\project_{bar,beer,p1}
+(
+(
+
+(
+\project_{beer,bar,p1} \rename_{b0: bar, beer, p1} serves
+)
+
+
+\diff
+
+(
+  \project_{beer, bar, p1} ( \select_{b1.p1 > b2.p2}  (
+
+          (
+            \rename_{b1: bar, beer, p1} serves
+          )
+
+        \cross
+        (
+          \rename_{b2: bar2, beer2, p2} serves
+        )
+      )
+))
+
+)
+)
+)
+\union
+
+(
+
+\rename_{serves: bar, beer, price}\project_{bar,beer,p1}
+(
+(
+
+(
+\project_{beer,bar,p1} \rename_{b0: bar, beer, p1} (serves \diff (
+
+\rename_{serves: bar, beer, price}\project_{bar,beer,p1}
+(
+(
+
+(
+\project_{beer,bar,p1} \rename_{b0: bar, beer, p1} serves
+)
+
+
+\diff
+
+(
+  \project_{beer, bar, p1} ( \select_{b1.p1 > b2.p2}  (
+
+          (
+            \rename_{b1: bar, beer, p1} serves
+          )
+
+        \cross
+        (
+          \rename_{b2: bar2, beer2, p2} serves
+        )
+      )
+))
+
+)
+)
+))
+)
+
+
+\diff
+
+(
+  \project_{beer, bar, p1} ( \select_{b1.p1 > b2.p2}  (
+
+          (
+            \rename_{b1: bar, beer, p1} (serves \diff (
+
+            \rename_{serves: bar, beer, price}\project_{bar,beer,p1}
+            (
+            (
+
+            (
+            \project_{beer,bar,p1} \rename_{b0: bar, beer, p1} serves
+            )
+
+
+            \diff
+
+            (
+              \project_{beer, bar, p1} ( \select_{b1.p1 > b2.p2}  (
+
+                      (
+                        \rename_{b1: bar, beer, p1} serves
+                      )
+
+                    \cross
+                    (
+                      \rename_{b2: bar2, beer2, p2} serves
+                    )
+                  )
+            ))
+
+            )
+            )
+            ))
+          )
+
+        \cross
+        (
+          \rename_{b2: bar2, beer2, p2} (serves \diff (
+
+          \rename_{serves: bar, beer, price}\project_{bar,beer,p1}
+          (
+          (
+
+          (
+          \project_{beer,bar,p1} \rename_{b0: bar, beer, p1} serves
+          )
+
+
+          \diff
+
+          (
+            \project_{beer, bar, p1} ( \select_{b1.p1 > b2.p2}  (
+
+                    (
+                      \rename_{b1: bar, beer, p1} serves
+                    )
+
+                  \cross
+                  (
+                    \rename_{b2: bar2, beer2, p2} serves
+                  )
+                )
+          ))
+
+          )
+          )
+          ))
+        )
+      )
+))
+
+)
+)
+)
+)
+;

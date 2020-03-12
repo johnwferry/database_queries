@@ -1,0 +1,8 @@
+\project_{name} 
+(
+\select_{drinker='Eve'} 
+(
+frequents \join_{frequents.bar=bar.name} bar
+)
+)
+;

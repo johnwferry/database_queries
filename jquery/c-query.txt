@@ -1,0 +1,11 @@
+\project_{bar} 
+(
+\select_{serves.price<2.75} 
+(
+serves \join_{likes.beer=serves.beer}
+(
+\select_{drinker='Amy'} likes
+)
+)
+)
+;

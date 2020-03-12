@@ -1,0 +1,42 @@
+
+
+
+
+\project_{beer,bar}
+(
+(
+\project_{beer,bar,p1}\rename_{b0: bar, beer, p1}
+(serves \join
+(\project_{beer}
+(\select_{drinker='Eve'} likes)
+)
+)
+)
+
+
+\diff
+
+(
+  \project_{beer, bar, p1}  \select_{b1.p1 < b2.p2 and b1.beer = b2.beer2}  (
+
+          (
+  \rename_{b1: bar, beer, p1}
+        (serves \join
+          (\project_{beer}
+            (\select_{drinker='Eve'} likes)
+          )
+        )
+          )
+        \cross
+          (
+  \rename_{b2: bar2, beer2, p2}
+      (serves \join
+        (\project_{beer}
+          (\select_{drinker='Eve'} likes)
+        )
+      )
+          )
+      )
+)
+)
+;

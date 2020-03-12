@@ -1,0 +1,70 @@
+
+
+(
+(
+(\project_{name} drinker)
+
+\diff
+
+\rename_{n: name} \project_{drinker}(
+
+(
+\rename_{k:drinker, bar}
+\project_{drinker, bar} (frequents \join_{frequents.bar = s1.b1} \rename_{s1: b1, beer, price} serves
+  )
+)
+
+\diff
+
+\project_{drinker, bar}(
+
+(
+\rename_{f:drinker, bar, beer}
+\project_{drinker, bar, beer} (frequents \join_{frequents.bar = s1.b1} \rename_{s1: b1, beer, price} serves
+  )
+)
+
+\join_{f.drinker=l.d and f.beer=l.b} \rename_{l: d, b} likes
+
+)
+
+)
+)
+\diff
+
+\rename_{n2: name} \project_{drinker}(
+(
+\project_{drinker, bar}
+
+(
+  serves \join_{serves.beer=li.b} (\rename_{li: drinker, b} likes)
+)
+
+)
+
+\diff
+
+(
+\project_{drinker, bar}(
+
+(
+\rename_{f:drinker, bar, beer}
+\project_{drinker, bar, beer} (frequents \join_{frequents.bar = s1.b1} \rename_{s1: b1, beer, price} serves
+  )
+)
+
+\join_{f.drinker=l.d and f.beer=l.b} \rename_{l: d, b} likes
+
+)
+)
+
+)
+
+
+/*
+ bars that have beers they like - bars they frequent that have beers they like
+= list of names of people who don't visit all
+listof people - above - g answer.
+*/
+)
+;

@@ -1,0 +1,27 @@
+
+
+(
+
+(
+\rename_{k:drinker, bar}
+\project_{drinker, bar} (frequents \join_{frequents.bar = s1.b1} \rename_{s1: b1, beer, price} serves
+  )
+)
+
+\diff
+
+\project_{drinker, bar}(
+
+(
+\rename_{f:drinker, bar, beer}
+\project_{drinker, bar, beer} (frequents \join_{frequents.bar = s1.b1} \rename_{s1: b1, beer, price} serves
+  )
+)
+
+\join_{f.drinker=l.d and f.beer=l.b} \rename_{l: d, b} likes
+
+)
+
+)
+
+;
